@@ -7,17 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
     <div id="container">
-        <div id="my-info">
-            <img id="profile-img" src="./image_resources/profile_img.png" alt="My Photo">
-            <h1>Hi, I'm Sunil</h1>
-            <p>I am <span class="dynamic-text" id="dynamic-text"></span></p>
-            
-        <div id="contact-me">
-            <a class="img-icon" href="https://www.linkedin.com/in/santmailo/" target="_blank"><img src="https://www.iconpacks.net/icons/2/free-icon-linkedin-logo-2430.png" /></a>
-            <a class="img-icon" href="https://www.instagram.com/santmailo/" target="_blank"><img src="https://www.iconpacks.net/icons/3/free-icon-instagram-logo-8869.png" /></a>
-            <a class="img-icon" href="https://twitter.com/santmailo" target="_blank"><img src="https://www.iconpacks.net/icons/5/free-twitter-square-blue-logo-icon-15977.png" /></a>
-        </div>
+        <head>
+            <nav>
+                <a href="#my-info">Home</a>
+                <a href="#my-info">Home</a>
+                <a href="#my-info">Home</a>
+                <a href="#my-info">Home</a>
+                <a href="#my-info">Home</a>
+                <a href="#my-info">Home</a>
+            </nav>
+            <div id="my-info">
+                <img id="profile-img" src="./image_resources/profile_img.png" alt="My Photo">
+                <h1>Hi, I'm Sunil</h1>
+                <p>I am <span class="dynamic-text" id="dynamic-text"></span></p>
+                
+            <div id="contact-me">
+                <a class="img-icon" href="https://www.linkedin.com/in/santmailo/" target="_blank"><img src="https://www.iconpacks.net/icons/2/free-icon-linkedin-logo-2430.png" /></a>
+                <a class="img-icon" href="https://www.instagram.com/santmailo/" target="_blank"><img src="https://www.iconpacks.net/icons/3/free-icon-instagram-logo-8869.png" /></a>
+                <a class="img-icon" href="https://twitter.com/santmailo" target="_blank"><img src="https://www.iconpacks.net/icons/5/free-twitter-square-blue-logo-icon-15977.png" /></a>
+            </div>
+        </head>
+
     </div>
     <hr />
     <div id="about-me">
@@ -61,7 +73,7 @@
             </tr>
             <tr>
                 <td>HTML</td>
-                <td></td>
+                <td>Java</td>
                 <td>MySQL</td>
             </tr>
             <tr>
@@ -80,14 +92,23 @@
     <br />
     <hr />
 
-    <div id="contact-me">
-        <p>
-            <a href="https://twitter.com/santmailo" target="_blank"><img src="https://www.iconpacks.net/icons/5/free-twitter-square-blue-logo-icon-15977.png" /></a>
-            <a href="https://www.linkedin.com/in/santmailo/" target="_blank"><img src="https://www.iconpacks.net/icons/2/free-icon-linkedin-logo-2430.png" /></a>
-            <a href="https://www.instagram.com/santmailo/" target="_blank"><img src="https://www.iconpacks.net/icons/3/free-icon-instagram-logo-8869.png" /></a>
-    </p>
-    </div>
+    <form>
+        <h1>Contact Me</h1>
+        <br />
+        <label for="firstName">First name</label>
+        <input type="text" name="firstName" id="firstName">
+        <br />
+        <label for="lastName">Last name</label>
+        <input type="email" name="lastName" id="lastName">
+        <br />
 
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <br />
+        <input type="submit" value="submit">
+    </form>
+</div>
+</main>
 
     <script src="script.js"></script>
 </body>

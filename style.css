@@ -1,5 +1,6 @@
 html{
     scroll-behavior:smooth;
+    overflow-x: hidden;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -9,24 +10,60 @@ body{
     line-height: 1.5;
 }
 
-nav{
+h2{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+section.normal-nav>nav{
     background-color: #333;
     padding: 20px;
 }
 
-
-nav> a{
+section.normal-nav>nav> a{
     text-decoration: none;
     color: #fff;
     font-size: 20px;
-    margin: 0 10px;
+    margin: 0 5px;
+    padding-bottom: 10px;
 }
 
-nav>a:hover{
+section.normal-nav>nav>a:hover{
     color: wheat;
+    border-bottom: 2px solid;
 }
 
+section.mobile-nav{
+    display: none;
+    position:fixed;
+    top: 0;
+    right:0;
+    left :0;    
+    background-color: #333;
+    padding: 20px;
+}
 
+section#mobile-nav-section>nav{
+    display: flex;
+    font-size: large;
+    font-weight: bold;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+section#mobile-nav-section>nav>a:hover{
+    color: wheat;
+    border-bottom: 2px solid;
+}
+
+section#mobile-nav-section>nav>a{
+    text-decoration: none;
+    color: #fff;
+    margin: 10px 0;
+}
 
 
 
@@ -54,8 +91,8 @@ nav>a:hover{
 
 #profile-img{
     border-radius: 50px;
-    width: 500px;
-    height: 500px;  
+    width: 400px;
+    height: 400px;  
     margin-top: 20px;
 }
 
@@ -87,14 +124,85 @@ th,td {
 
 
 form{
-    width: 400px;
+    width: 600px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #b0c4de;
     background: white;
+    box-sizing: border-box;
     border-radius: 0px 0px 10px 10px;
 }
 
 input,textarea{
     width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+input[type="submit"]{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+/* mobile size */
+@media (width<=650px){
+    section.normal-nav{
+        display: none;
+    }
+    
+    section.mobile-nav{
+        display: block;
+    }
+
+    section#mobile-nav-section{
+        display: none;
+    }
+
+    #cross-button{
+        width: fit-content;
+        margin: 10px;
+        font-size: xx-large;
+        background-color: inherit;
+        color: white;
+        border: none;
+        position: absolute;
+        right: 20px;
+        top: 5px;
+    }
+
+    #menu-button{
+        width: fit-content;
+        margin: 10px;
+        font-size: xx-large;
+        background-color: inherit;
+        color: white;
+        border: none;
+        border-bottom: 2px solid white;
+    }
+
+    #my-info>#profile-img{
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        margin: 20% auto;
+    }
+
+    form{
+        width:fit-content;
+    }
 }
